@@ -12,13 +12,13 @@ const createDate = (dates,data) =>{
   let arr =[];
   if (data ||data == 0) {
     for (let a = 0; a < dates.length; a++) {
-      arr.push(Date.parse(dates[i])/1000);      
+      arr.push(Date.parse(dates[a])/1000);      
     }
     return arr.sort().join("-");
   } else {
     for (let b = 0; b < dates.length; b++) {
       if (b == data) {
-        return (Date.parse(dates[i])/1000).toString();
+        return (Date.parse(dates[b])/1000).toString();
       }
     }
   }
