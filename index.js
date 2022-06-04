@@ -8,9 +8,9 @@ const dates = [
 ];
 
 // TODO: Buatlah fungsi createDate
-const createDate = (dates1,data=false) =>{
+const createDate = (dates,data=false) =>{
   let arr =[];
-  if (data ==+ false) {
+  if (data == false) {
     for (let a = 0; a < dates.length; a++) {
       arr.push(Date.parse(dates[a])/1000);      
     }
