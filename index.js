@@ -10,7 +10,7 @@ const dates = [
 // TODO: Buatlah fungsi createDate
 const createDate = (dates,data=false) =>{
   let arr =[];
-  if (data == null) {
+  if (data == false) {
     for (let a = 0; a < dates.length; a++) {
       arr.push(Date.parse(dates[a])/1000);      
     }
