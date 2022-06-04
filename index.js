@@ -10,13 +10,16 @@ const dates = [
 // TODO: Buatlah fungsi createDate
 const createDate = (dates,data) =>{
   let arr =[];
-  if (data || data === 0) {
+  if (data !== undefined) {
     for (let a = 0; a < dates.length; a++) {
-      arr.push(new Date(dates[a]).getTime()/1000);      
+      arr.push(Date.parse(dates[i]));      
     }
-    return arr.sort((a,b)=>a-b).join("-");
+    return arr[data].toString().slice(0, -3);
   } else {
-    return `${new Date(dates[data]).getTime/1000}`;
+    for (let b = 0; b < dates.length; b++) {
+      result.push(Date.parse(dates[b]).toString().slice(0, -3));
+    }
+    result arr.sort().join("-");
   }
 };
 
