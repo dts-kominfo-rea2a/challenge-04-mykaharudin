@@ -8,18 +8,19 @@ const dates = [
 ];
 
 // TODO: Buatlah fungsi createDate
-const createDate = (dates,index) =>{
+const createDate = (dates,data) =>{
   let arr =[];
-  if (index !== undefined) {
+  if (data ||data == 0) {
     for (let a = 0; a < dates.length; a++) {
-      arr.push(Date.parse(dates[i]));      
-    }
-    return arr[index].toString().slice(0, -3);
-  } else {
-    for (let b = 0; b < dates.length; b++) {
-      result.push(Date.parse(dates[b]).toString().slice(0, -3));
+      arr.push(Date.parse(dates[i])/1000);      
     }
     return arr.sort().join("-");
+  } else {
+    for (let b = 0; b < dates.length; b++) {
+      if (b == data) {
+        return (Date.parse(dates[i])/1000).toString();
+      }
+    }
   }
 };
 
