@@ -18,7 +18,6 @@ const createDate = (dates,data=false) =>{
   } else {
         return (Date.parse(dates[data])/1000).toString();
     }
-  }
 };
 
 // ! JANGAN DIMODIFIKASI
