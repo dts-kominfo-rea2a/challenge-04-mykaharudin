@@ -8,15 +8,15 @@ const dates = [
 ];
 
 // TODO: Buatlah fungsi createDate
-const createDate = (dates,data=false) =>{
+const createDate = (dates1,data=false) =>{
   let arr =[];
   if (data === false) {
-    for (let a = 0; a < dates.length; a++) {
-      arr.push(Date.parse(dates[a])/1000);      
+    for (let a = 0; a < dates1.length; a++) {
+      arr.push(Date.parse(dates1[a])/1000);      
     }
     return arr.sort().join('-');
   } else {
-        return (Date.parse(dates[data])/1000).toString();
+        return (Date.parse(dates1[data])/1000).toString();
       }
 };
 
